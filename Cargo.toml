@@ -28,9 +28,9 @@ objc = "0.2"
 [target.'cfg(target_os = "macos")'.dependencies]
 objc = "0.2"
 cgl = "0.1"
-cocoa = "0.3.2"
-core-foundation = "0"
-core-graphics = "0.3"
+cocoa = "0.6.0"
+core-foundation = "0.2.3"
+core-graphics = "0.5"
 
 [target.'cfg(target_os = "windows")'.dependencies]
 winapi = "0.2"
@@ -44,3 +44,9 @@ dwmapi-sys = "0.1"
 osmesa-sys = "0.1.0"
 wayland-client = { version = "0.7.4", features = ["egl", "dlopen"] }
 x11-dl = "2.4"
+
+[replace."winit:0.5.9"]
+git = "https://github.com/bvssvni/winit"
+branch = "unpin"
+
+
